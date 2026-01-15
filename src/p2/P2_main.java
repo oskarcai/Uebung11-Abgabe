@@ -8,12 +8,14 @@ public class P2_main {
 
     // Iterativer Logarithmus:
     public static int log_2_i(int n) {
-        int count = 1;
-        while(n != 2) {
+        if(n == 1) return 0;
+
+        int log = 1;
+        while(n > 2) {
             n /= 2;
-            count++;
+            log++;
         }
-        return count;
+        return log;
     }
 
     // Rekursiver Logarithmus:
