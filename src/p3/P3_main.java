@@ -16,14 +16,14 @@ public class P3_main {
     }
 
     /*
-         Für kapital = 100; n = 4;
+    Für n = 4:
 
-    -> verzinsung(100, 4);
-          -> 1.05 * verzinsung(100, 3);
-                  -> 1.05 * verzinsung(100, 2);
-                            -> 1.05 * verzinsung(100, 1);
-                                      -> 1.05 * verzinsung(100, 0);
-                                                -> 100
+    -> verzinsung(kapital, 4);
+          -> 1.05 * verzinsung(kapital, 3);
+          -> 1.05 * 1.05 * verzinsung(kapital, 2);
+          -> 1.05 * 1.05 * 1.05 * verzinsung(kapital, 1);
+          -> 1.05 * 1.05 * 1.05 * 1.05 * verzinsung(kapital, 0);
+          -> 1.05 * 1.05 * 1.05 * 1.05 * kapital
     */
 
 }
