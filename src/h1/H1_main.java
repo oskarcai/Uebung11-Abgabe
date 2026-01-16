@@ -13,7 +13,7 @@ public class H1_main {
     }
 
     public static int distance(Node x, Node y) {
-        if (x.equals(y)) return 0;
+        if (x == y) return 0;
         return 1 + distance(x.getNext(), y);
     }
 
