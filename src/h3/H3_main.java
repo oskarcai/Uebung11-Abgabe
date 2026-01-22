@@ -65,4 +65,33 @@ public class H3_main {
 
         return mergeList;
     }
+
+    // -> Musterlösung aus der Übung:
+    private static int[] merge2 (int[] leftList, int[] rightList) {
+        int[] mergeList = new int[leftList.length + rightList.length];
+
+        int leftIndex = 0;
+        int rightIndex = 0;
+
+        for(int i = 0; i < mergeList.length; i++) {
+            if(leftIndex >= leftList.length) {
+                mergeList[i] = rightList[rightIndex];
+                rightIndex++;
+            } else if(rightIndex >= rightList.length) {
+                mergeList[i] = leftList[leftIndex];
+                leftIndex++;
+            } else {
+                if(leftList[leftIndex] <= rightList[rightIndex]) {
+                    mergeList[i] = leftList[leftIndex];
+                    leftIndex++;
+                } else {
+                    mergeList[i] = rightList[rightIndex];
+                    rightIndex++;
+                }
+            }
+        }
+
+        return mergeList;
+    }
+
 }
